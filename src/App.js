@@ -9,10 +9,14 @@ class App extends Component{
     constructor(){
         super()
         this.state = {
-            robots: robots,
+            robots: [],
             searchField: ''
 
         }
+    }
+
+    componentDidMount(){
+       this.setState({ robots: robots});
     }
     onSearchChange = (event)=> {
         //Any function that we create so that everytime the search changes DOM manipulation, we get an event //
